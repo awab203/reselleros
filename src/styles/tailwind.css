@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Primary Colors */
+  --color-primary: #00D4FF; /* Electric blue for primary actions and key data highlights */
+  --color-primary-50: #E6F9FF; /* Very light blue tint */
+  --color-primary-100: #CCF3FF; /* Light blue tint */
+  --color-primary-200: #99E7FF; /* Medium light blue */
+  --color-primary-300: #66DBFF; /* Medium blue */
+  --color-primary-400: #33CFFF; /* Medium dark blue */
+  --color-primary-500: #00D4FF; /* Base primary color */
+  --color-primary-600: #00A7CC; /* Darker blue */
+  --color-primary-700: #007A99; /* Dark blue */
+  --color-primary-800: #004D66; /* Very dark blue */
+  --color-primary-900: #002033; /* Darkest blue */
+
+  /* Secondary Colors */
+  --color-secondary: #8B5CF6; /* Purple accent for secondary actions */
+  --color-secondary-50: #F3F0FF; /* Very light purple tint */
+  --color-secondary-100: #E7E0FF; /* Light purple tint */
+  --color-secondary-200: #CFC1FF; /* Medium light purple */
+  --color-secondary-300: #B7A2FF; /* Medium purple */
+  --color-secondary-400: #9F83FF; /* Medium dark purple */
+  --color-secondary-500: #8B5CF6; /* Base secondary color */
+  --color-secondary-600: #7C3AED; /* Darker purple */
+  --color-secondary-700: #6D28D9; /* Dark purple */
+  --color-secondary-800: #5B21B6; /* Very dark purple */
+  --color-secondary-900: #4C1D95; /* Darkest purple */
+
+  /* Accent Colors */
+  --color-accent: #FF6B6B; /* Coral red for alerts and profit highlights */
+  --color-accent-50: #FFF0F0; /* Very light coral tint */
+  --color-accent-100: #FFE1E1; /* Light coral tint */
+  --color-accent-200: #FFC3C3; /* Medium light coral */
+  --color-accent-300: #FFA5A5; /* Medium coral */
+  --color-accent-400: #FF8787; /* Medium dark coral */
+  --color-accent-500: #FF6B6B; /* Base accent color */
+  --color-accent-600: #FF4757; /* Darker coral */
+  --color-accent-700: #E63946; /* Dark coral */
+  --color-accent-800: #CC2936; /* Very dark coral */
+  --color-accent-900: #B31B26; /* Darkest coral */
+
+  /* Background Colors */
+  --color-background: #0A0A0B; /* Deep charcoal base - gray-950 */
+  --color-background-50: #F9FAFB; /* Very light background */
+  --color-background-100: #F3F4F6; /* Light background */
+  --color-background-200: #E5E7EB; /* Medium light background */
+  --color-background-300: #D1D5DB; /* Medium background */
+  --color-background-400: #9CA3AF; /* Medium dark background */
+  --color-background-500: #6B7280; /* Base background */
+  --color-background-600: #4B5563; /* Darker background */
+  --color-background-700: #374151; /* Dark background */
+  --color-background-800: #1F2937; /* Very dark background */
+  --color-background-900: #111827; /* Darkest background */
+
+  /* Surface Colors */
+  --color-surface: #1A1A1D; /* Elevated surface color - gray-900 */
+  --color-surface-50: #F8FAFC; /* Very light surface */
+  --color-surface-100: #F1F5F9; /* Light surface */
+  --color-surface-200: #E2E8F0; /* Medium light surface */
+  --color-surface-300: #CBD5E1; /* Medium surface */
+  --color-surface-400: #94A3B8; /* Medium dark surface */
+  --color-surface-500: #64748B; /* Base surface */
+  --color-surface-600: #475569; /* Darker surface */
+  --color-surface-700: #334155; /* Dark surface */
+  --color-surface-800: #1E293B; /* Very dark surface */
+  --color-surface-900: #0F172A; /* Darkest surface */
+
+  /* Text Colors */
+  --color-text-primary: #FFFFFF; /* Pure white for primary text - white */
+  --color-text-secondary: #A0A0A3; /* Muted gray for secondary text - gray-400 */
+  --color-text-50: #F8FAFC; /* Very light text */
+  --color-text-100: #F1F5F9; /* Light text */
+  --color-text-200: #E2E8F0; /* Medium light text */
+  --color-text-300: #CBD5E1; /* Medium text */
+  --color-text-400: #94A3B8; /* Medium dark text */
+  --color-text-500: #64748B; /* Base text */
+  --color-text-600: #475569; /* Darker text */
+  --color-text-700: #334155; /* Dark text */
+  --color-text-800: #1E293B; /* Very dark text */
+  --color-text-900: #0F172A; /* Darkest text */
+
+  /* Success Colors */
+  --color-success: #00FF88; /* Bright green for profit indicators - green-400 */
+  --color-success-50: #ECFDF5; /* Very light success tint */
+  --color-success-100: #D1FAE5; /* Light success tint */
+  --color-success-200: #A7F3D0; /* Medium light success */
+  --color-success-300: #6EE7B7; /* Medium success */
+  --color-success-400: #34D399; /* Medium dark success */
+  --color-success-500: #10B981; /* Base success */
+  --color-success-600: #059669; /* Darker success */
+  --color-success-700: #047857; /* Dark success */
+  --color-success-800: #065F46; /* Very dark success */
+  --color-success-900: #064E3B; /* Darkest success */
+
+  /* Warning Colors */
+  --color-warning: #FFB800; /* Amber for caution states - yellow-500 */
+  --color-warning-50: #FFFBEB; /* Very light warning tint */
+  --color-warning-100: #FEF3C7; /* Light warning tint */
+  --color-warning-200: #FDE68A; /* Medium light warning */
+  --color-warning-300: #FCD34D; /* Medium warning */
+  --color-warning-400: #FBBF24; /* Medium dark warning */
+  --color-warning-500: #F59E0B; /* Base warning */
+  --color-warning-600: #D97706; /* Darker warning */
+  --color-warning-700: #B45309; /* Dark warning */
+  --color-warning-800: #92400E; /* Very dark warning */
+  --color-warning-900: #78350F; /* Darkest warning */
+
+  /* Error Colors */
+  --color-error: #FF4757; /* Vibrant red for errors - red-500 */
+  --color-error-50: #FEF2F2; /* Very light error tint */
+  --color-error-100: #FEE2E2; /* Light error tint */
+  --color-error-200: #FECACA; /* Medium light error */
+  --color-error-300: #FCA5A5; /* Medium error */
+  --color-error-400: #F87171; /* Medium dark error */
+  --color-error-500: #EF4444; /* Base error */
+  --color-error-600: #DC2626; /* Darker error */
+  --color-error-700: #B91C1C; /* Dark error */
+  --color-error-800: #991B1B; /* Very dark error */
+  --color-error-900: #7F1D1D; /* Darkest error */
+}
+
+@layer base {
+*  {
+    
+  }
+  
+  body {
+    @apply bg-background text-text-primary font-body;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+}
+
+@layer components {
+  .glow-primary {
+    box-shadow: 0 4px 20px rgba(0, 212, 255, 0.15);
+  }
+  
+  .glow-secondary {
+    box-shadow: 0 4px 20px rgba(139, 92, 246, 0.15);
+  }
+  
+  .elevation-base {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  .border-subtle {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .border-active {
+    border: 1px solid rgba(0, 212, 255, 0.3);
+  }
+  
+  .transition-smooth {
+    transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .transition-major {
+    transition: all 400ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .micro-scale-down {
+    transform: scale(0.95);
+  }
+  
+  .micro-scale-up {
+    transform: scale(1.05);
+  }
+}
+
+@layer utilities {
+  .text-shadow-glow {
+    text-shadow: 0 0 10px currentColor;
+  }
+  
+  .backdrop-blur-cinematic {
+    backdrop-filter: blur(12px) saturate(180%);
+  }
+}
